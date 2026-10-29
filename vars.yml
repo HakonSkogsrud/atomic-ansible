@@ -1,0 +1,67 @@
+---
+desktop_user: haaksk
+
+local_subnet: 10.0.0.0/24
+local_route_rule_priority: 5000
+home_network_connection: virus.exe
+home_firewall_zone: home
+
+rpm_ostree_apply_live: true
+manage_systemd_resolved: true
+
+fedora_immutable_network_packages:
+  - avahi
+  - syncthing
+  - tailscale
+
+localsend_ports:
+  - 53317/tcp
+  - 53317/udp
+
+tailscale_udp_port: 41641/udp
+
+flatpak_apps:
+  - com.brave.Browser
+  - md.obsidian.Obsidian
+  - org.darktable.Darktable
+  - org.localsend.localsend_app
+  - org.onlyoffice.desktopeditors
+  - org.signal.Signal
+
+dev_toolbox_name: dev
+
+dev_toolbox_packages:
+  - bat
+  - curl
+  - direnv
+  - eza
+  - fd-find
+  - fzf
+  - gcc
+  - gh
+  - git
+  - git-delta
+  - neovim
+  - nodejs22
+  - perl-Image-ExifTool
+  - python3
+  - ripgrep
+  - stow
+  - tmux
+  - uv
+  - wget2
+  - zoxide
+  - zsh
+  - zsh-autosuggestions
+
+dev_toolbox_lazygit_version: 0.65.1
+dev_toolbox_lazygit_checksum: 02beacbcda0fa342e50ae3480ba8147307353af3fb28e1d5f790e02329c201a6
+
+inter_font_version: v4.1
+inter_font_checksum: 9883fdd4a49d4fb66bd8177ba6625ef9a64aa45899767dde3d36aa425756b11e
+
+nerd_fonts_version: v3.4.0
+# Installed family name: BitstromWera Nerd Font.
+nerd_fonts:
+  - name: BitstreamVeraSansMono
+    checksum: 59162ab2d67d39827e497beda03fbe6327d3535d2ee3b1dd7050fdeafe1f9c36
